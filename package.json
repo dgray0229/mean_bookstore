@@ -1,0 +1,18 @@
+{
+  "name": "MEAN_Bookstore",
+  "version": "1.0.0",
+  "description": "A MEAN Stack Practice Bookstore app",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app"
+  },
+  "dependencies":{
+    "express":"*",
+    "body-parser":"*",
+    "mongoose":"*"
+  },
+  "keywords": [],
+  "author": "Devin Gray",
+  "license": "ISC"
+}
