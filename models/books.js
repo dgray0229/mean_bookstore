@@ -52,26 +52,24 @@ module.exports.addBook = function (book, callback) {
     Book.create(book, callback);
 }
 
-
 // Update Book
-module.exports.addGenre = function (id, book, options, callback) {
-    var query = {_id: id},
-        update = {
-            title: book.title,
-            genre: book.genre,
-            description: book.description,
-            author: book.author,
-            publisher: book.publisher,
-            pages: book.pages,
-            image_url: book.image_url,
-            buy_url: book.buy_url
-        }
-
-    Genre.findOneAndUpdate(query, update, options, callback);
+module.exports.updateBook = function (id, book, options, callback) {
+    var query = {_id: id};
+    var update = {
+        title: book.title,
+        genre: book.genre,
+        description: book.description,
+        author: book.author,
+        publisher: book.publisher,
+        pages: book.pages,
+        image_url: book.image_url,
+        buy_url: book.buy_url
+    }
+    Book.findOneAndUpdate(query, update, options, callback);
 }
 
-// Delete Genre
-module.exports.removeBook = function(id, callback){
+// Delete Book
+module.exports.removeBook = function (id, callback) {
     var query = {_id: id};
     Book.remove(query, callback);
 }
