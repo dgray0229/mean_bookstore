@@ -16,6 +16,8 @@ app.get('/', function (req, res) {
 });
 
 // Genres
+
+
 app.get('/api/genres', function (req, res) {
     Genre.getGenres(function (err, genres) {
         if (err) throw err;
@@ -30,6 +32,26 @@ app.post('/api/genres', function (req, res) {
         res.json(genre);
     });
 });
+
+app.put('/api/genres', function (req, res) {
+    var id = req.params._id,
+        genre = req.body;
+    Genre.updateGenre(id, genre, {}, function (err, genre) {
+        if (err) throw err;
+        res.json(genre);
+    });
+});
+
+app.delete('/api/genres/:_id', function (req, res) {
+    var id = req.params._id;
+
+    Genre.removeGenre(id, function (err, genre) {
+        if(err) throw err;
+        res.json(genre);
+    });
+});
+
+
 
 // Books
 app.get('/api/books', function (req, res) {
@@ -54,6 +76,25 @@ app.post('/api/books', function (req, res) {
     });
 });
 
+app.put('/api/books/:_id', function (req, res) {
+    var id = req.params._id,
+        book = req.body;
+
+    Book.updateBook(id, genre, {}, function (err, book) {
+        if (err) throw err;
+        res.json(book);
+    });
+});
+
+
+app.delete('/api/books/:_id', function (req, res) {
+    var query = {_id: id};
+
+    Book.removeBook(id, function (err, book) {
+        if(err) throw err;
+        res.json(book);
+    });
+});
 
 app.listen(3000);
 console.log('Running on port 3000');
