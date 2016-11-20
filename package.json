@@ -1,5 +1,5 @@
 {
-  "name": "MEAN_Bookstore",
+  "name": "mean_bookstore",
   "version": "1.0.0",
   "description": "A MEAN Stack Practice Bookstore app",
   "main": "app.js",
