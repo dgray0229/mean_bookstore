@@ -1,7 +1,8 @@
 var express = require('express'),
     app = express(),
     bodyParser = require('body-parser'),
-    mongoose = require('mongoose');
+    mongoose = require('mongoose'),
+    uri = process.env.MONGODB_URI;
 
 app.use(express.static(__dirname + '/client'));
 app.use(bodyParser.json());
@@ -9,7 +10,7 @@ app.use(bodyParser.json());
 var Genre = require('./models/genre'),
     Book = require('./models/books');
 
-mongoose.connect(process.env.MONGODB_URI);
+mongoose.connect(uri);
 var db = mongoose.connection;
 
 app.get('/', function (req, res) {
