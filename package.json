@@ -5,14 +5,14 @@
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon app"
+    "start": "node app"
   },
   "dependencies":{
     "express":"*",
     "body-parser":"*",
     "mongoose":"*"
   },
-  "keywords": [],
+  "keywords": ["mean", "bookstore", "book", "express"],
   "author": "Devin Gray",
   "license": "ISC"
 }

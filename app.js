@@ -9,7 +9,7 @@ app.use(bodyParser.json());
 var Genre = require('./models/genre'),
     Book = require('./models/books');
 
-mongoose.connect('mongodb://localhost/MEAN_Bookstore');
+mongoose.connect(MONGODB_URI);
 var db = mongoose.connection;
 
 app.get('/', function (req, res) {
