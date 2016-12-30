@@ -15,8 +15,6 @@
   "dependencies": {
     "body-parser": "*",
     "express": "*",
-    "handlebars": "^4.0.6",
-    "mongodb": "^2.2.16",
     "mongoose": "*"
   },
   "keywords": [
