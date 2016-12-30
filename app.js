@@ -9,7 +9,6 @@ app.use(bodyParser.json());
 
 var Genre = require('./models/genre'),
     Book = require('./models/books');
-console.log(MONGODB_URI);
 mongoose.connect(MONGODB_URI);
 
 app.get('/', function (req, res) {
