@@ -2,6 +2,7 @@ var express = require('express'),
     app = express(),
     bodyParser = require('body-parser'),
     mongoose = require('mongoose'),
+    PORT = process.env.PORT || 3000,
     MONGODB_URI = process.env.MONGODB_URI;
 
 app.use(express.static(__dirname + '/client'));
@@ -9,6 +10,7 @@ app.use(bodyParser.json());
 
 var Genre = require('./models/genre'),
     Book = require('./models/books');
+
 mongoose.connect(MONGODB_URI);
 
 app.get('/', function (req, res) {
@@ -104,5 +106,5 @@ app.delete('/api/books/:_id', function (req, res) {
     });
 });
 
-app.listen(3000);
-console.log('Running on port 3000...');
+app.listen(PORT);
+console.log('Running on port ' + PORT);
