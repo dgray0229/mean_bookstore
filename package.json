@@ -7,13 +7,22 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node app"
   },
-  "cacheDirectories": ["node_modules", "bower_components"],
-  "dependencies":{
-    "express":"*",
-    "body-parser":"*",
-    "mongoose":"*"
+  "cacheDirectories": [
+    "node_modules",
+    "bower_components"
+  ],
+  "dependencies": {
+    "body-parser": "*",
+    "express": "*",
+    "mongodb": "^2.2.16",
+    "mongoose": "*"
   },
-  "keywords": ["mean", "bookstore", "book", "express"],
+  "keywords": [
+    "mean",
+    "bookstore",
+    "book",
+    "express"
+  ],
   "author": "Devin Gray",
   "license": "ISC"
 }
