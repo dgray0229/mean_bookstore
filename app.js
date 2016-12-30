@@ -2,16 +2,15 @@ var express = require('express'),
     app = express(),
     bodyParser = require('body-parser'),
     mongoose = require('mongoose'),
-    uri = process.env.MONGODB_URI;
+    MONGODB_URI = process.env.MONGODB_URI;
 
 app.use(express.static(__dirname + '/client'));
 app.use(bodyParser.json());
 
 var Genre = require('./models/genre'),
     Book = require('./models/books');
-
-mongoose.connect(uri);
-var db = mongoose.connection;
+console.log(MONGODB_URI);
+mongoose.connect(MONGODB_URI);
 
 app.get('/', function (req, res) {
     res.send('Please use /api/books or /api/genres');

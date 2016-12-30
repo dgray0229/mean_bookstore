@@ -1,2 +1,2 @@
-local: nodemon app;
-web: npm start;
+local: nodemon app
+web: npm start

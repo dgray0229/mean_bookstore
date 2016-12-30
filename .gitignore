@@ -1,3 +1,4 @@
 node_modules
 .idea
-,env
+.env
+bower_components
